@@ -13,6 +13,7 @@
 ![Patrón](https://img.shields.io/badge/Patr%C3%B3n-Serverless-orange.svg)
 ![Pruebas](https://img.shields.io/badge/Pruebas-23%20autom%C3%A1ticas-success.svg)
 ![Plan](https://img.shields.io/badge/Plan-Gratuito%20sin%20tarjeta-green.svg)
+[![Licencia](https://img.shields.io/badge/Licencia-MIT-green.svg)](LICENSE)
 
 **[Contexto](#-contexto-y-alcance) • [Contenido](#-contenido-del-repositorio) • [Tecnologías](#-tecnologías-utilizadas) • [Arquitectura](#️-arquitectura) • [API](#-endpoints-de-la-api) • [Ejecución](#-ejecución) • [Problemas](#️-solución-de-problemas) • [Autor](#-autor)**
 
@@ -39,6 +40,7 @@
 - [📡 Logs y Eliminación de Recursos](#-logs-y-eliminación-de-recursos)
 - [🛠️ Solución de Problemas](#️-solución-de-problemas)
 - [📝 Nota](#-nota)
+- [⚖️ Licencia](#️-licencia)
 - [👤 Autor](#-autor)
 
 ---
@@ -92,6 +94,7 @@ No hay servidores que aprovisionar, parchear ni escalar. Funciona en el plan gra
   <tr><td><code>requirements-dev.txt</code></td><td>🐍 Dependencias de Python para las pruebas</td></tr>
   <tr><td><code>.gitignore</code></td><td>🚫 Excluye <code>node_modules/</code>, <code>.wrangler/</code>, cachés de Python y <code>.dev.vars</code></td></tr>
   <tr><td><code>README.md</code></td><td>📄 Este documento</td></tr>
+  <tr><td><code>LICENSE</code></td><td>⚖️ Licencia MIT</td></tr>
 </table>
 
 ---
@@ -254,11 +257,17 @@ Este proyecto corresponde a una **actividad académica** y se elaboró con fines
 
 ---
 
+## ⚖️ Licencia
+
+Este proyecto se distribuye bajo la **Licencia MIT**. Consulta el archivo [`LICENSE`](LICENSE) para más detalles.
+
+---
+
 ## 👤 Autor
 
 <div align="center">
 
-Este proyecto fue desarrollado en el marco del módulo **Contenerización de Aplicaciones de Software** de la **Maestría en Arquitectura de Software** del **Politécnico Grancolombiano**.
+Este proyecto fue desarrollado en el marco del módulo **Contenerización de Aplicaciones de Software** de la **Maestría en Arquitectura de Software** del **Politécnico Grancolombiano**, bajo la orientación del docente **Victor Augusto Pedraza Bonilla**.
 
 | Autor | Perfil |
 |:---:|:---:|
