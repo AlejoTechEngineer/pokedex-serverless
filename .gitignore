@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+__pycache__/
+.pytest_cache/
+*.bak
+.dev.vars

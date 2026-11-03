@@ -1,0 +1,19 @@
+# Configuración de Cloudflare Workers (reemplaza a template.yaml de AWS SAM).
+name = "pokedex-serverless"
+main = "src/worker.js"
+compatibility_date = "2025-09-01"
+
+# Frontend estático: lo sirve Cloudflare. Solo /api/* ejecuta el Worker.
+[assets]
+directory = "./frontend"
+run_worker_first = ["/api/*"]
+
+# Base de datos serverless D1. database_id lo escribe scripts/deploy.sh tras crearla.
+# En local (wrangler dev) el valor no importa.
+[[d1_databases]]
+binding = "DB"
+database_name = "pokedex"
+database_id = "1c6d17d0-3380-44c9-a31e-313ac90bf4bd"
+
+[observability]
+enabled = true

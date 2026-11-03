@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex Serverless · Explorador de datos</title>
+  <meta name="description" content="Aplicación web serverless que consulta un dataset de 1.215 registros almacenado en Cloudflare D1.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="top">
+    <div class="top__title">
+      <h1>Pokédex Serverless</h1>
+      <p>1.215 registros leídos en vivo desde Cloudflare D1, a través de un Worker serverless.</p>
+    </div>
+    <div class="top__right">
+      <div class="status" id="apiStatus" role="status" aria-live="polite">
+        <span class="status__dot" aria-hidden="true"></span><span id="apiStatusText">Conectando con la API…</span>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Vistas">
+        <button class="tab is-active" role="tab" id="tab-explore" aria-selected="true" aria-controls="view-explore">Explorador</button>
+        <button class="tab" role="tab" id="tab-overview" aria-selected="false" aria-controls="view-overview">Panorama</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="banner" id="banner" role="alert" hidden></div>
+
+    <!-- ============================ EXPLORADOR ============================ -->
+    <section id="view-explore" role="tabpanel" aria-labelledby="tab-explore" class="explore">
+      <div class="explore__list">
+        <form class="console" id="searchForm" autocomplete="off">
+          <div class="mode" role="radiogroup" aria-label="Buscar por">
+            <label class="mode__opt"><input type="radio" name="mode" value="id" checked><span>Por ID</span></label>
+            <label class="mode__opt"><input type="radio" name="mode" value="name"><span>Por nombre</span></label>
+          </div>
+          <div class="console__row">
+            <label class="sr-only" for="q" id="qLabel">Número de la Pokédex</label>
+            <input id="q" class="console__input" type="text" inputmode="numeric" placeholder="25" maxlength="40" required>
+            <button class="btn btn--primary" type="submit">Buscar</button>
+            <button class="btn" type="button" id="clearBtn">Limpiar</button>
+          </div>
+          <div class="filters">
+            <label>Tipo primario
+              <select id="fType"><option value="">Todos</option></select>
+            </label>
+            <label>Generación
+              <select id="fGen">
+                <option value="">Todas</option>
+              </select>
+            </label>
+          </div>
+        </form>
+
+        <p class="summary" id="summary" aria-live="polite"></p>
+
+        <div class="table-wrap">
+          <table class="grid" id="grid">
+            <caption class="sr-only">Registros del dataset</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="num">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Tipos</th>
+                <th scope="col" class="num">Total</th>
+                <th scope="col" class="num">PS</th>
+                <th scope="col" class="num">Ata</th>
+                <th scope="col" class="num">Def</th>
+                <th scope="col" class="num">Vel</th>
+                <th scope="col" class="num">Gen</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+          <p class="empty" id="empty" hidden></p>
+        </div>
+        <button class="btn btn--wide" id="moreBtn" hidden>Cargar más registros</button>
+      </div>
+
+      <aside class="entry" id="entry" aria-live="polite" aria-label="Ficha del registro seleccionado"></aside>
+    </section>
+
+    <!-- ============================= PANORAMA ============================= -->
+    <section id="view-overview" role="tabpanel" aria-labelledby="tab-overview" hidden class="overview"></section>
+  </main>
+
+  <footer class="foot">
+    <p>Datos: lista pública de Pokémon (GitHub · lgreski/pokemonData). Pokémon y sus nombres son marcas de sus respectivos propietarios; uso académico.</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

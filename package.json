@@ -1,0 +1,17 @@
+{
+  "name": "pokedex-serverless",
+  "version": "1.0.0",
+  "description": "Pok\u00e9dex serverless: Cloudflare Workers + D1",
+  "scripts": {
+    "seed": "python3 scripts/build_seed.py",
+    "db:local": "wrangler d1 execute pokedex --local --file db/schema.sql && wrangler d1 execute pokedex --local --file db/seed.sql",
+    "dev": "wrangler dev",
+    "test": "node --test tests/worker.test.mjs && python3 -m pytest tests -q",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.156.2"
+  },
+  "private": true,
+  "type": "module"
+}
