@@ -243,7 +243,8 @@
 
   function renderEntry(item, forms) {
     ui.entry.style.setProperty("--type", color(item.type1));
-    ui.entry.replaceChildren(
+    // replaceChildren recibe nodos o textos; por eso se aplana el arreglo y se descartan los null.
+    ui.entry.replaceChildren(...[
       h("p", { class: "big-num", "aria-hidden": "true" }, fmtId(item.id)),
       h("h2", {}, item.name),
       h("div", { class: "entry__meta" }, chips(item),
@@ -262,7 +263,7 @@
           h("span", { class: "stat__val" }, item[k]))),
       h("div", { class: "stat stat--total" }, h("span", {}, "Total"), h("span", { class: "stat__val" }, item.total)),
       radar(item),
-    );
+    ].flat(Infinity).filter(Boolean));
   }
 
   /* --------------------------------------------------------------- panorama */
