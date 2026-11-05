@@ -97,6 +97,8 @@ No hay servidores que aprovisionar, parchear ni escalar. Funciona en el plan gra
   <tr><td colspan="2"><b>📂 tests/</b></td></tr>
   <tr><td><code>worker.test.mjs</code> · <code>d1-shim.mjs</code></td><td>🧪 17 pruebas del Worker sobre SQLite real</td></tr>
   <tr><td><code>test_seed.py</code></td><td>🧪 6 pruebas del generador de SQL</td></tr>
+  <tr><td colspan="2"><b>📂 docs/</b></td></tr>
+  <tr><td><code>Desarrollo_U4_Actividad_Sumativa_Serverless.pdf</code></td><td>📑 Documento de entrega de la actividad (PDF)</td></tr>
   <tr><td colspan="2"><b>📂 raíz</b></td></tr>
   <tr><td><code>wrangler.toml</code></td><td>☁️ Configuración de Cloudflare (Worker, archivos estáticos y enlace a D1)</td></tr>
   <tr><td><code>package.json</code> · <code>package-lock.json</code></td><td>📦 Dependencias y comandos de Node (<code>dev</code>, <code>db:local</code>, <code>test</code>, <code>deploy</code>)</td></tr>
