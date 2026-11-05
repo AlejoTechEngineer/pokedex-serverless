@@ -30,6 +30,7 @@
 ## 📋 Tabla de Contenidos
 
 - [🎯 Contexto y Alcance](#-contexto-y-alcance)
+- [🎬 Video Explicativo](#-video-explicativo)
 - [📁 Contenido del Repositorio](#-contenido-del-repositorio)
 - [🧰 Tecnologías Utilizadas](#-tecnologías-utilizadas)
 - [🏗️ Arquitectura](#️-arquitectura)
@@ -63,6 +64,14 @@ No hay servidores que aprovisionar, parchear ni escalar. Funciona en el plan gra
 - 🔍 **Búsqueda por ID** (clave principal) y **por nombre** (columna secundaria), con filtros y paginación por cursor.
 - 🖥️ **Aplicación web** con tabla, ficha en tarjeta y gráficas.
 - 🧪 **23 pruebas automáticas**: 17 del Worker sobre SQLite real y 6 del generador de SQL.
+
+---
+
+## 🎬 Video Explicativo
+
+📺 **[Ver el video explicativo de la actividad en YouTube](https://youtu.be/TodbzdBe8oU)**
+
+> ⚠️ **Calidad:** el video debe verse en **1080p HD** (en YouTube: engranaje → Calidad → 1080p); en calidades inferiores el texto del código y de las terminales no se lee correctamente.
 
 ---
 
