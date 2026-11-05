@@ -1,4 +1,4 @@
-# Configuración de Cloudflare Workers (reemplaza a template.yaml de AWS SAM).
+# Configuración de Cloudflare Workers.
 name = "pokedex-serverless"
 main = "src/worker.js"
 compatibility_date = "2025-09-01"

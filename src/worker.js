@@ -1,7 +1,7 @@
-// Punto de entrada del Worker (equivalente a la función Lambda).
+// Punto de entrada del Worker.
 //
 // La cadena de manejadores se crea una sola vez por "isolate" y se reutiliza en las
-// peticiones siguientes (igual que el warm start de Lambda). Los archivos estáticos del
+// peticiones siguientes (arranque en caliente). Los archivos estáticos del
 // frontend los sirve Cloudflare directamente (ver [assets] en wrangler.toml); este Worker
 // solo recibe las rutas /api/*.
 
